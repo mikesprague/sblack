@@ -1,7 +1,5 @@
 #!/bin/sh
-PROJECT_DIR="$(pwd)/Sblack"
-INFOPLIST_FILE="Info.plist"
-buildString=$(/usr/libexec/PlistBuddy -s -c "Print CFBundleVersion" "${PROJECT_DIR}/${INFOPLIST_FILE}")
+buildString=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "Sblack/Info.plist")
 buildDate=$(echo $buildString | cut -c 1-8)
 buildNumber=$(echo $buildString | cut -c 9-11)
 today=$(date +'%Y%m%d')
@@ -12,5 +10,5 @@ else
 buildNumber=1
 fi
 buildString=$(printf '%s%03u' $today $buildNumber)
-/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $buildString" "${PROJECT_DIR}/${INFOPLIST_FILE}"
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $buildString" "Sblack/Info.plist"
 echo $buildString
