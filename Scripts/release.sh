@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 PROJECT_NAME=Sblack
 PROJECT_DIR=$(pwd)/$PROJECT_NAME
 INFOPLIST_FILE="Info.plist"
@@ -13,7 +16,7 @@ rm -rf Product/*
 # xcodebuild archive -project $PROJECT_NAME.xcodeproj -scheme $PROJECT_NAME -archivePath Archive/$PROJECT_NAME.xcarchive
 # xcodebuild -exportArchive -archivePath Archive/$PROJECT_NAME.xcarchive -exportPath Product/$PROJECT_NAME.app
 
-xcodebuild -project $PROJECT_NAME.xcodeproj -scheme "Sblack" -derivedDataPath ~/.build -configuration Release
+xcodebuild -workspace $PROJECT_NAME.xcworkspace -scheme "Sblack" -derivedDataPath ~/.build -configuration Release
 rm -rf Product/${PROJECT_NAME}.app
 ditto /Users/frank/.build/Build/Products/Release/${PROJECT_NAME}.app Product/${PROJECT_NAME}.app
 

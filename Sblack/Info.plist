@@ -28,5 +28,7 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUFeedURL</key>
+	<string>https://boxyapp.s3.amazonaws.com/sblack/appcast.xml</string>
 </dict>
 </plist>
