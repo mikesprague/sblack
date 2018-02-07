@@ -1,11 +1,11 @@
 # Sblack &nbsp;<img width="50px" src="Github/icon.png">
 
-Sblack makes [Slack for Mac](https://slack.com/downloads/osx) easier on your eyes. 
+> Sblack makes [Slack for Mac](https://slack.com/downloads/osx) easier on your eyes. 
 Just drag and drop and you're done ✨
-
-> We made Sblack for all those people that, like us, use Slack all day long.
 > 
-> Made by [Francesco Di Lorenzo](http://www.twitter.com/frankdilo) and designed by [Fabrizio Rinaldi](http://www.twitter.com/linuz90)
+> Made for all the people that, like us, use Slack all day long.
+
+Developed by [Francesco Di Lorenzo](http://www.twitter.com/frankdilo) and designed by [Fabrizio Rinaldi](http://www.twitter.com/linuz90)
 
 
 ## Install and Usage
@@ -18,6 +18,7 @@ Just drag and drop and you're done ✨
 
 ## Related
 
+- [Official Website](http://www.sblack.online)
 - [Slack Night Mode](https://github.com/laCour/slack-night-mode) - Original CSS used to make Slack dark.
 
 ## Preview
