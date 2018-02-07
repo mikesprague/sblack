@@ -20,4 +20,8 @@ xcodebuild -workspace $PROJECT_NAME.xcworkspace -scheme "Sblack" -derivedDataPat
 rm -rf Product/${PROJECT_NAME}.app
 ditto /Users/frank/.build/Build/Products/Release/${PROJECT_NAME}.app Product/${PROJECT_NAME}.app
 
-zip --symlinks -r "Product/$PROJECT_NAME.v${CFBundleShortVersionString}.b${CFBundleVersion}.zip" Product/$PROJECT_NAME.app
+pushd Product
+
+zip --symlinks -r "$PROJECT_NAME.v${CFBundleShortVersionString}.b${CFBundleVersion}.zip" $PROJECT_NAME.app
+
+popd
